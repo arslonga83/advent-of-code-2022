@@ -83,7 +83,6 @@ console.log(strategyGuide)
 let total = 0
 
 strategyGuide.forEach((round) => {
-  
   if (round === 'A X') {
     total += 3;
   }
