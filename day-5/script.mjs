@@ -38,15 +38,18 @@ function runProgram() {
 runProgram()
 
 function craneMove(num, from, to) {
-  //i think this will make the right number of moves for each instruction
-  for (let i = 0; i < num; i++) {
-    // console.log(to, from)
-    //first pop out one number
-    const item = removeItem(from)
-    //then push it to the correct stack
-    pushItem(item, to)
+  //QUESTION 1
+  // for (let i = 0; i < num; i++) {
+  //   // console.log(to, from)
+  //   //first pop out one number
+  //   const item = removeItem(from)
+  //   //then push it to the correct stack
+  //   pushItem(item, to)
+  //QUESTION 2
+  const items = removeMultipleItems(num, from)
+  pushMultipleItems(items, to)
   }
-}
+
 
 function removeItem(from) {
   if (from === '1') {
@@ -123,3 +126,65 @@ function printAnswer() {
 
 
 
+function removeMultipleItems(num, from) {
+  if (from === '1') {
+    return stack1.splice(-num, num)
+  }
+  if (from === '2') {
+    return stack2.splice(-num, num)
+  }
+  if (from === '3') {
+    return stack3.splice(-num, num)
+  }
+  if (from === '4') {
+    return stack4.splice(-num, num)
+  }
+  if (from === '5') {
+    return stack5.splice(-num, num)
+  }
+  if (from === '6') {
+    return stack6.splice(-num, num)
+  }
+  if (from === '7') {
+    return stack7.splice(-num, num)
+  }
+  if (from === '8') {
+    return stack8.splice(-num, num)
+  }
+  if (from === '9') {
+    return stack9.splice(-num, num)
+  }
+}
+
+function pushMultipleItems(item, to) {
+  item.forEach((item) => {
+    if (to === '1') {
+      stack1.push(item)
+    }
+    if (to === '2') {
+      stack2.push(item)
+    }
+    if (to === '3') {
+      stack3.push(item)
+    }
+    if (to === '4') {
+      stack4.push(item)
+    }
+    if (to === '5') {
+      stack5.push(item)
+    }
+    if (to === '6') {
+      stack6.push(item)
+    }
+    if (to === '7') {
+      stack7.push(item)
+    }
+    if (to === '8') {
+      stack8.push(item)
+    }
+    if (to === '9') {
+      stack9.push(item)
+    }
+  })
+ 
+}
